@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1508615039623-a25605d2b022?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bG9naW58ZW58MHx8MHx8fDA%3D");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .custom-dropdown::after {
+            content: " ▼";
+            transition: color 0.3s ease;
+        }
+
+        .custom-dropdown:hover::after {
+            color: #eff3f8;
+        }
+
+        .custom-dropdown[aria-expanded="true"]::after {
+            content: " ▲";
+        }   
+
+        .abc {
+            border-radius: 15px;
+        }
+
+        .iti {
+            width: 100% !important;
+        }
+
+
+
+
+        @media (min-width: 992px) {
+            .ms-lg-custom {
+                margin-left: 150px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+        style="position: sticky; top: 0; z-index: 100; width: 100%;">
+        <div class="container-fluid ms-lg-custom">
+
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+                    alt="Logo" style="height: 40px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+
+                <form class="d-flex me-3" style="flex: 1; max-width: 800px;">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="search" class="form-control border-start-0" id="search"
+                            placeholder="Search for Products, Brands and More" aria-label="Search">
+                    </div>
+                    <button class="btn btn-outline-primary ms-2" type="submit">Search</button>
+                </form>
+
+                <div class="dropdown me-auto ms-3">
+                    <a class="btn btn-outline-secondary custom-dropdown position-relative fw-bold" href="#"
+                        role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person"></i>
+                        SignUp/Login
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">My Profile</a></li>
+                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                        <li><a class="dropdown-item" href="./index.html">SignUp</a></li>
+                    </ul>
+                </div>
+
+                <ul class="navbar-nav me-5 d-flex">
+                    <li>
+                        <a href="#" class="text-center mx-3 text-decoration-none text-dark d-block">
+                            <i class="bi bi-heart fs-5"></i><br>
+                            <small>Wishlist</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-center mx-3 text-decoration-none text-dark d-block">
+                            <i class="bi bi-cart fs-5"></i><br>
+                            <small>Cart</small>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid mt-5">
+        <div class="container mt-5  border border-secondary rounded p-4 shadow" style="max-width: 400px;">
+            <div id="success-alert" class="alert alert-success d-none" role="alert">
+                Successfully signed up!
+            </div>
+            <form id="signup-form">
+                <div class="d-flex justify-content-center mb-4">
+                    <h1 class="fw-bold">SignUp Form</h1>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="first-name" class="form-label fw-bold">First Name</label>
+                        <input type="text" class="form-control abc" name="firstName" placeholder="First Name"
+                            id="first-name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last-name" class="form-label fw-bold">Last Name</label>
+                        <input type="text" class="form-control abc" name="lastName" placeholder="Last Name"
+                            id="last-name">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone-number" class="form-label fw-bold">Phone Number</label>
+                    <input type="tel" class="form-control  abc" name="phone" placeholder="Phone Number"
+                        id="phone-number">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
+                    <input type="email" class="form-control  abc" name="email" placeholder="Email"
+                        id="exampleInputEmail1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
+                    <input type="password" class="form-control  abc" name="password" placeholder="Password"
+                        id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputConfirmPassword1" class="form-label fw-bold">Confirm Password</label>
+                    <input type="password" class="form-control  abc" name="confirmPassword"
+                        placeholder="Confirm Password" id="exampleInputConfirmPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input fw-bold" name="terms" id="exampleCheck1">
+                    <label class="form-check-label  abc" name="terms" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-success w-75 abc">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
